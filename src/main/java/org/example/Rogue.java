@@ -1,8 +1,14 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Rogue extends Hero {
 
     private HeroAttribute heroAttribute;
+
+    private final ArrayList<WeaponType> validWeaponTypes = new ArrayList<>(List.of(WeaponType.SWORD, WeaponType.DAGGER));
+
 
     public Rogue(String name) {
         super(name);

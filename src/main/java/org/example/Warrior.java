@@ -1,13 +1,19 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Warrior extends Hero {
 
 
     private HeroAttribute heroAttribute;
+    private ArrayList<WeaponType> validWeaponTypes;
 
     public Warrior(String name) {
         super(name);
         heroAttribute = new HeroAttribute(5, 2, 1);
+        Collections.addAll(this.validWeaponTypes, WeaponType.SWORD, WeaponType.AXE, WeaponType.HAMMER);
+
     }
 
     @Override
@@ -16,6 +22,7 @@ public class Warrior extends Hero {
         heroAttribute.strength += 3;
         heroAttribute.dexterity += 2;
         heroAttribute.intelligence += 1;
+
 
     }
 

@@ -1,7 +1,6 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 
 public abstract class Hero {
@@ -9,12 +8,11 @@ public abstract class Hero {
     private String name;
     private int Level = 1;
 
+    private ArrayList<WeaponType> validWeaponTypes;
 
-    private ArrayList<String> equipment = new ArrayList<>();
 
-    private ArrayList<String> validWeaponTypes = new ArrayList<>();
+    private ArrayList<Item> equipment = new ArrayList<>();
 
-    private ArrayList<String> validArmorTypes = new ArrayList<>();
 
 
     public Hero(String name) {
@@ -27,8 +25,8 @@ public abstract class Hero {
     }
 
 
-    public void setEquipment(String equipment) {
-        this.equipment.add(equipment);
+    public void equip(Item item) {
+        this.equipment.add(item);
     }
 
     public void display() {

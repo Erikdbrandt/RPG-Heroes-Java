@@ -1,12 +1,19 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Mage extends Hero {
 
     private HeroAttribute heroAttribute;
+    private ArrayList<WeaponType> validWeaponTypes;
+
 
     public Mage(String name) {
         super(name);
         heroAttribute = new HeroAttribute(1, 1, 8);
+        Collections.addAll(validWeaponTypes, WeaponType.STAFF, WeaponType.WAND);
+
     }
 
     @Override
@@ -16,6 +23,19 @@ public class Mage extends Hero {
         heroAttribute.dexterity += 1;
         heroAttribute.intelligence += 8;
 
+    }
+
+    @Override
+    public void equip(Item item) {
+        if (item instanceof Weapon) {
+            if (validWeaponTypes.contains(((Weapon) item).getWeaponType())) {
+                super.equip(item);
+            } else {
+                System.out.println("Invalid weapon type");
+            }
+        } else {
+          return;
+        }
     }
 
     @Override
