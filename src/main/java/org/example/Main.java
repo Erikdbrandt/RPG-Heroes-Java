@@ -10,5 +10,10 @@ public class Main {
         mage.levelUp();
         mage.display();
 
+        Ranger ranger = new Ranger("Legolas");
+        ranger.levelUp();
+        ranger.levelUp();
+        ranger.display();
+
     }
 }

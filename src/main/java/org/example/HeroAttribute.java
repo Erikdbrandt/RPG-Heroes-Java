@@ -13,6 +13,4 @@ public class HeroAttribute {
     int intelligence;
 
 
-
-
 }

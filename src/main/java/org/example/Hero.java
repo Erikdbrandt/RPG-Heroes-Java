@@ -1,14 +1,13 @@
 package org.example;
+
 import java.util.ArrayList;
 import java.util.HashMap;
-
 
 
 public abstract class Hero {
 
     private String name;
     private int Level = 1;
-
 
 
     private ArrayList<String> equipment = new ArrayList<>();
@@ -32,7 +31,7 @@ public abstract class Hero {
         this.equipment.add(equipment);
     }
 
-    public void display () {
+    public void display() {
         System.out.println("Name: " + name);
         System.out.println("Level: " + Level);
         System.out.println("Equipment: " + equipment);
