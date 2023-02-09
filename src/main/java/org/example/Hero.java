@@ -15,6 +15,8 @@ public abstract class Hero {
 
     private HashMap<Slot, Item> equipment = new HashMap<>();
 
+    private HeroAttribute heroAttribute;
+
 
     // the constructor initializes the valid weapon and armor types
     public Hero(String name) {
@@ -65,7 +67,6 @@ public abstract class Hero {
         return false;
     }
 
-
     public void equip(Weapon weapon) {
         if (canEquip(weapon)) {
             equipment.put(weapon.getSlot(), weapon);
@@ -78,13 +79,36 @@ public abstract class Hero {
         }
     }
 
+    public HeroAttribute getHeroAttribute() {
+        return heroAttribute;
+    }
 
+    public HeroAttribute totalHeroAttributes() {
+
+        HeroAttribute heroA = new HeroAttribute(0, 0, 0);
+
+        for (Item item : equipment.values()) {
+            if (item instanceof Armor) {
+                HeroAttribute h = ((Armor) item).getArmorAttribute();
+
+                heroA.increaseAttributes(h.getStrength(), h.getDexterity(), h.getIntelligence());
+
+
+            }
+        }
+        heroA.increaseAttributes(getHeroAttribute().getStrength(), getHeroAttribute().getDexterity(), getHeroAttribute().getIntelligence());
+
+        return heroA;
+
+
+    }
 
 
     public void display() {
         System.out.println("Name: " + name);
         System.out.println("Level: " + level);
         System.out.println("Equipment: " + equipment);
+        System.out.println(totalHeroAttributes());
     }
 
 

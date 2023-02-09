@@ -20,6 +20,10 @@ public class Rogue extends Hero {
 
     }
 
+    public HeroAttribute getHeroAttribute() {
+        return heroAttribute;
+    }
+
     @Override
     public ArrayList<ArmorType> getValidArmorTypes() {
         return validArmorTypes;
@@ -33,17 +37,15 @@ public class Rogue extends Hero {
     @Override
     public void levelUp() {
         super.levelUp();
-        heroAttribute.strength += 1;
-        heroAttribute.dexterity += 4;
-        heroAttribute.intelligence += 1;
-
+        heroAttribute.increaseAttributes(1, 4, 1);
     }
 
     @Override
     public void display() {
         super.display();
-        System.out.println("Strength: " + heroAttribute.strength);
+        System.out.println(heroAttribute);
+    /*    System.out.println("Strength: " + heroAttribute.strength);
         System.out.println("Dexterity: " + heroAttribute.dexterity);
-        System.out.println("Intelligence: " + heroAttribute.intelligence);
+        System.out.println("Intelligence: " + heroAttribute.intelligence);*/
     }
 }
