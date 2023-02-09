@@ -6,23 +6,24 @@ import java.util.HashMap;
 
 public abstract class Hero {
 
-    private String name;
+    private final String name;
     private int level = 1;
 
     private ArrayList<WeaponType> validWeaponTypes;
 
+    private ArrayList<ArmorType> validArmorTypes; //göra denna abstract i framtiden sen kanske?
 
-    private HashMap<Slot,Item> equipment = new HashMap();
+    private HashMap<Slot, Item> equipment = new HashMap<>();
 
 
-
+    // the constructor initializes the valid weapon and armor types
     public Hero(String name) {
         this.name = name;
 
-        equipment.put(Slot.Head, null);
-        equipment.put(Slot.Body, null);
-        equipment.put(Slot.Legs, null);
-        equipment.put(Slot.Weapon, null);
+        equipment.put(Slot.HEAD, null);
+        equipment.put(Slot.BODY, null);
+        equipment.put(Slot.LEGS, null);
+        equipment.put(Slot.WEAPON, null);
 
     }
 
@@ -35,7 +36,11 @@ public abstract class Hero {
         return validWeaponTypes;
     }
 
-    public  Boolean isEquippable(Item item) {
+    public ArrayList<ArmorType> getValidArmorTypes() {
+        return validArmorTypes;
+    }
+
+    public Boolean canEquip(Item item) {
         if (item instanceof Weapon) {
             if (!getValidWeaponTypes().contains(((Weapon) item).getWeaponType())) {
                 System.out.println("Invalid weapon type");
@@ -46,18 +51,35 @@ public abstract class Hero {
                 return false;
             }
             return true;
-        } else {
-            return false;
+        } else if (item instanceof Armor) {
+            if (!getValidArmorTypes().contains(((Armor) item).getArmorType())) {
+                System.out.println("Invalid Armor type");
+                return false;
+            }
+            if (item.getRequiredLevel() > level) {
+                System.out.println("Item level too high");
+                return false;
+            }
+            return true;
+        }
+        return false;
+    }
+
+
+    public void equip(Weapon weapon) {
+        if (canEquip(weapon)) {
+            equipment.put(weapon.getSlot(), weapon);
+        }
+    }
+
+    public void equip(Armor armor) {
+        if (canEquip(armor)) {
+            equipment.put(armor.getSlot(), armor);
         }
     }
 
 
-    public void equip(Item item) {
-        if(isEquippable(item)) {
-            equipment.put(item.getSlot(), item);
-        }
 
-    }
 
     public void display() {
         System.out.println("Name: " + name);

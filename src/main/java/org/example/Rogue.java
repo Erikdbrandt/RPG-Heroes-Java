@@ -2,7 +2,6 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public class Rogue extends Hero {
 
@@ -10,13 +9,20 @@ public class Rogue extends Hero {
 
     private final ArrayList<WeaponType> validWeaponTypes;
 
+    private final ArrayList<ArmorType> validArmorTypes;
 
 
     public Rogue(String name) {
         super(name);
         heroAttribute = new HeroAttribute(2, 6, 1);
         Collections.addAll(validWeaponTypes = new ArrayList<>(), WeaponType.SWORD, WeaponType.DAGGER);
+        Collections.addAll(validArmorTypes = new ArrayList<>(), ArmorType.LEATHER, ArmorType.MAIL);
 
+    }
+
+    @Override
+    public ArrayList<ArmorType> getValidArmorTypes() {
+        return validArmorTypes;
     }
 
     @Override

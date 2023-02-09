@@ -3,19 +3,12 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
+        Ranger ranger = new Ranger("legolas");
 
+        ranger.equip(new Weapon("bow", 1,  10, WeaponType.BOW));
 
-        Warrior warrior = new Warrior("Conan");
+        ranger.equip(new Armor("leather", 1, Slot.BODY, ArmorType.LEATHER, new HeroAttribute(1, 1, 1)));
 
-        warrior.levelUp();
-        warrior.levelUp();
-
-        warrior.equip(new Weapon("Sword", 1, Slot.Weapon, 10, WeaponType.SWORD));
-
-        warrior.equip(new Weapon("Axe", 2, Slot.Weapon, 10, WeaponType.AXE));
-
-
-        warrior.display();
-
+        ranger.display();
     }
 }

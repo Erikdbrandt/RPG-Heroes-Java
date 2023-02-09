@@ -1,21 +1,20 @@
 package org.example;
 
-public class Item {
+public abstract class Item {
 
-    private String name;
-    private int requiredLevel;
+    private final String name;
+    private final int requiredLevel;
 
-    private Slot slot;
 
-    public Item(String name, int requiredLevel, Slot slot) {
+
+    public Item(String name, int requiredLevel) {
         this.name = name;
         this.requiredLevel = requiredLevel;
-        this.slot = slot;
+
     }
 
-    public Slot getSlot() {
-        return slot;
-    }
+    public abstract Slot getSlot();
+
 
     public int getRequiredLevel() {
         return requiredLevel;
@@ -23,10 +22,6 @@ public class Item {
 
     public String getName() {
         return name;
-    }
-
-    void equipItem(Hero hero) {
-        hero.equip(this);
     }
 
 

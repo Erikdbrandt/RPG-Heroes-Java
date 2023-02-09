@@ -1,8 +1,8 @@
 package org.example;
 
 public enum Slot {
-    Weapon,
-    Head,
-    Body,
-    Legs
+    WEAPON,
+    HEAD,
+    BODY,
+    LEGS
 }

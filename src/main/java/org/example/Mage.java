@@ -6,14 +6,22 @@ import java.util.Collections;
 public class Mage extends Hero {
 
     private HeroAttribute heroAttribute;
-    private ArrayList<WeaponType> validWeaponTypes;
+    private final ArrayList<WeaponType> validWeaponTypes;
+
+    private final ArrayList<ArmorType> validArmorTypes;
 
 
     public Mage(String name) {
         super(name);
         heroAttribute = new HeroAttribute(1, 1, 8);
         Collections.addAll(validWeaponTypes = new ArrayList<>(), WeaponType.STAFF, WeaponType.WAND);
+        Collections.addAll(validArmorTypes = new ArrayList<>(), ArmorType.LEATHER, ArmorType.MAIL);
 
+    }
+
+    @Override
+    public ArrayList<ArmorType> getValidArmorTypes() {
+        return validArmorTypes;
     }
 
     @Override
@@ -30,18 +38,9 @@ public class Mage extends Hero {
         return validWeaponTypes;
     }
 
-  /*  @Override
-    public  void equip(Item item) {
-        if (item instanceof Weapon) {
-            if (validWeaponTypes.contains(((Weapon) item).getWeaponType())) {
-                super.equip(item);
-            } else {
-                System.out.println("Invalid weapon type");
-            }
-        } else {
-          return;
-        }
-    }*/
+
+
+
 
     @Override
     public void display() {

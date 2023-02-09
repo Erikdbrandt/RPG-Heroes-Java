@@ -13,4 +13,14 @@ public class HeroAttribute {
     int intelligence;
 
 
+    @Override
+    public String toString() {
+        return "HeroAttribute{" +
+                "strength=" + strength +
+                ", dexterity=" + dexterity +
+                ", intelligence=" + intelligence +
+                '}';
+    }
+
+
 }
