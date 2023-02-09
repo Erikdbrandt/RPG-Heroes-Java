@@ -12,8 +12,13 @@ public class Warrior extends Hero {
     public Warrior(String name) {
         super(name);
         heroAttribute = new HeroAttribute(5, 2, 1);
-        Collections.addAll(this.validWeaponTypes, WeaponType.SWORD, WeaponType.AXE, WeaponType.HAMMER);
+        Collections.addAll(validWeaponTypes = new ArrayList<>(), WeaponType.SWORD, WeaponType.AXE, WeaponType.HAMMER);
 
+    }
+
+    @Override
+    public ArrayList<WeaponType> getValidWeaponTypes() {
+        return validWeaponTypes;
     }
 
     @Override

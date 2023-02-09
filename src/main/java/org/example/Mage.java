@@ -12,7 +12,7 @@ public class Mage extends Hero {
     public Mage(String name) {
         super(name);
         heroAttribute = new HeroAttribute(1, 1, 8);
-        Collections.addAll(validWeaponTypes, WeaponType.STAFF, WeaponType.WAND);
+        Collections.addAll(validWeaponTypes = new ArrayList<>(), WeaponType.STAFF, WeaponType.WAND);
 
     }
 
@@ -26,7 +26,12 @@ public class Mage extends Hero {
     }
 
     @Override
-    public void equip(Item item) {
+    public ArrayList<WeaponType> getValidWeaponTypes() {
+        return validWeaponTypes;
+    }
+
+  /*  @Override
+    public  void equip(Item item) {
         if (item instanceof Weapon) {
             if (validWeaponTypes.contains(((Weapon) item).getWeaponType())) {
                 super.equip(item);
@@ -36,7 +41,7 @@ public class Mage extends Hero {
         } else {
           return;
         }
-    }
+    }*/
 
     @Override
     public void display() {

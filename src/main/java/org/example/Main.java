@@ -3,17 +3,19 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        Mage mage = new Mage("Gandalf");
 
 
-        mage.levelUp();
-        mage.levelUp();
-        mage.display();
+        Warrior warrior = new Warrior("Conan");
 
-        Ranger ranger = new Ranger("Legolas");
-        ranger.levelUp();
-        ranger.levelUp();
-        ranger.display();
+        warrior.levelUp();
+        warrior.levelUp();
+
+        warrior.equip(new Weapon("Sword", 1, Slot.Weapon, 10, WeaponType.SWORD));
+
+        warrior.equip(new Weapon("Axe", 2, Slot.Weapon, 10, WeaponType.AXE));
+
+
+        warrior.display();
 
     }
 }

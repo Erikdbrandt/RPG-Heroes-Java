@@ -1,18 +1,27 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Rogue extends Hero {
 
     private HeroAttribute heroAttribute;
 
-    private final ArrayList<WeaponType> validWeaponTypes = new ArrayList<>(List.of(WeaponType.SWORD, WeaponType.DAGGER));
+    private final ArrayList<WeaponType> validWeaponTypes;
+
 
 
     public Rogue(String name) {
         super(name);
         heroAttribute = new HeroAttribute(2, 6, 1);
+        Collections.addAll(validWeaponTypes = new ArrayList<>(), WeaponType.SWORD, WeaponType.DAGGER);
+
+    }
+
+    @Override
+    public ArrayList<WeaponType> getValidWeaponTypes() {
+        return validWeaponTypes;
     }
 
     @Override
