@@ -1,24 +1,24 @@
-package org.example;
+package org.example.heroes;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.example.items.*;
+
 
 public abstract class Hero {
 
-    private final String name;
-    private int level = 1;
+    protected final String name;
+    protected int level = 1;
 
-    private ArrayList<WeaponType> validWeaponTypes;
+    protected ArrayList<WeaponType> validWeaponTypes;
 
-    private ArrayList<ArmorType> validArmorTypes; //göra denna abstract i framtiden sen kanske?
+    protected ArrayList<ArmorType> validArmorTypes;
 
-    private HashMap<Slot, Item> equipment = new HashMap<>();
+    protected HashMap<Slot, Item> equipment = new HashMap<>();
 
-    private HeroAttribute heroAttribute;
+    protected HeroAttribute heroAttribute;
 
-
-    // the constructor initializes the valid weapon and armor types
     public Hero(String name) {
         this.name = name;
 
@@ -26,7 +26,6 @@ public abstract class Hero {
         equipment.put(Slot.BODY, null);
         equipment.put(Slot.LEGS, null);
         equipment.put(Slot.WEAPON, null);
-
     }
 
 
@@ -34,17 +33,10 @@ public abstract class Hero {
         level++;
     }
 
-    public ArrayList<WeaponType> getValidWeaponTypes() {
-        return validWeaponTypes;
-    }
-
-    public ArrayList<ArmorType> getValidArmorTypes() {
-        return validArmorTypes;
-    }
 
     public Boolean canEquip(Item item) {
         if (item instanceof Weapon) {
-            if (!getValidWeaponTypes().contains(((Weapon) item).getWeaponType())) {
+            if (!validWeaponTypes.contains(((Weapon) item).getWeaponType())) {
                 System.out.println("Invalid weapon type");
                 return false;
             }
@@ -54,7 +46,7 @@ public abstract class Hero {
             }
             return true;
         } else if (item instanceof Armor) {
-            if (!getValidArmorTypes().contains(((Armor) item).getArmorType())) {
+            if (!validArmorTypes.contains(((Armor) item).getArmorType())) {
                 System.out.println("Invalid Armor type");
                 return false;
             }
@@ -79,29 +71,23 @@ public abstract class Hero {
         }
     }
 
-    public HeroAttribute getHeroAttribute() {
-        return heroAttribute;
-    }
-
     public HeroAttribute totalHeroAttributes() {
 
-        HeroAttribute heroA = new HeroAttribute(0, 0, 0);
+        HeroAttribute totalHeroAttributes = new HeroAttribute(0, 0, 0);
 
         for (Item item : equipment.values()) {
-            if (item instanceof Armor) {
-                HeroAttribute h = ((Armor) item).getArmorAttribute();
-
-                heroA.increaseAttributes(h.getStrength(), h.getDexterity(), h.getIntelligence());
-
+            if (item instanceof Armor armor) { //implementera detta
+                HeroAttribute armorAttribute = armor.getArmorAttribute();
+                totalHeroAttributes.increaseAttributes(armorAttribute.strength, armorAttribute.dexterity, armorAttribute.intelligence);
 
             }
         }
-        heroA.increaseAttributes(getHeroAttribute().getStrength(), getHeroAttribute().getDexterity(), getHeroAttribute().getIntelligence());
+        totalHeroAttributes.increaseAttributes(heroAttribute.strength, heroAttribute.dexterity, heroAttribute.intelligence);
 
-        return heroA;
-
-
+        return totalHeroAttributes;
     }
+
+    public abstract void totalDamage();
 
 
     public void display() {

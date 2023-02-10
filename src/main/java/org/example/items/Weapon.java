@@ -1,4 +1,4 @@
-package org.example;
+package org.example.items;
 
 public class Weapon extends Item {
 
@@ -15,6 +15,9 @@ public class Weapon extends Item {
         this.slot = Slot.WEAPON;
     }
 
+    public int getWeaponDamage() {
+        return weaponDamage;
+    }
 
 
     public WeaponType getWeaponType() {

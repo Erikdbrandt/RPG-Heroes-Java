@@ -1,12 +1,12 @@
-package org.example;
+package org.example.heroes;
 
 import java.util.ArrayList;
 
 public class HeroAttribute {
 
-    private int strength;
-    private int dexterity;
-    private int intelligence;
+    protected int strength;
+    protected int dexterity;
+    protected int intelligence;
 
     public HeroAttribute(int strength, int dexterity, int intelligence) {
         this.strength = strength;
@@ -20,15 +20,6 @@ public class HeroAttribute {
         this.intelligence += intelligence;
     }
 
-    public int getStrength() {
-        return strength;
-    }
-    public int getDexterity() {
-        return dexterity;
-    }
-    public int getIntelligence() {
-        return intelligence;
-    }
 
     @Override
     public String toString() {

@@ -1,6 +1,6 @@
-package org.example;
+package org.example.items;
 
-enum WeaponType {
+public enum WeaponType {
 
     AXE,
     BOW,

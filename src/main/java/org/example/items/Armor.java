@@ -1,4 +1,6 @@
-package org.example;
+package org.example.items;
+
+import org.example.heroes.HeroAttribute;
 
 public class Armor extends Item {
 
