@@ -15,6 +15,7 @@ public class Mage extends Hero {
         heroAttribute = new HeroAttribute(1, 1, 8);
         Collections.addAll(validWeaponTypes = new ArrayList<>(), WeaponType.STAFF, WeaponType.WAND);
         Collections.addAll(validArmorTypes = new ArrayList<>(), ArmorType.CLOTH);
+        heroType = HeroType.MAGE;
 
     }
 
@@ -26,21 +27,6 @@ public class Mage extends Hero {
 
     }
 
-    @Override
-    public void totalDamage() {
 
-        int damagingAttribute = totalHeroAttributes().intelligence;
-
-
-
-        if(equipment.get(Slot.WEAPON) instanceof Weapon weapon) {
-
-           int damage =  weapon.getWeaponDamage();
-
-        }
-
-        Weapon weapon = (Weapon) equipment.get(Slot.WEAPON);
-
-    }
 
 }

@@ -19,6 +19,8 @@ public abstract class Hero {
 
     protected HeroAttribute heroAttribute;
 
+    protected HeroType heroType;
+
     public Hero(String name) {
         this.name = name;
 
@@ -87,7 +89,42 @@ public abstract class Hero {
         return totalHeroAttributes;
     }
 
-    public abstract void totalDamage();
+    public  void totalDamage() {
+
+
+
+        int damagingAttribute;
+
+        switch (this instanceof ) {
+            case MAGE -> damagingAttribute = totalHeroAttributes().intelligence;
+            case ROGUE, RANGER -> damagingAttribute = totalHeroAttributes().dexterity;
+            case WARRIOR -> damagingAttribute = totalHeroAttributes().strength;
+            default -> {
+                System.out.println("Invalid hero type");
+                return;
+            }
+        }
+
+     if(this instanceof Warrior warrior) {
+         System.out.println("i am mage!");
+     }
+
+
+            int weaponDamage = 1;
+
+            if (equipment.get(Slot.WEAPON) instanceof Weapon weapon) {
+
+                weaponDamage = weapon.getWeaponDamage();
+            }
+
+            int heroDamage = weaponDamage * (1 + (damagingAttribute / 100));
+
+            System.out.println("Hero damage: " + heroDamage);
+
+
+
+        }
+
 
 
     public void display() {
