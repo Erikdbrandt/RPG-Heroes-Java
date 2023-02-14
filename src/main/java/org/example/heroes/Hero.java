@@ -19,7 +19,7 @@ public abstract class Hero {
 
     protected HeroAttribute heroAttribute;
 
-    protected HeroType heroType;
+
 
     public Hero(String name) {
         this.name = name;
@@ -91,7 +91,9 @@ public abstract class Hero {
     public void totalDamage() {
 
         int damagingAttribute = 0;
+        int weaponDamage = 1;
 
+        // this gets the damaging attribute of the hero depending on the hero type (mage, warrior, ranger, rogue)
         if (this instanceof Mage) {
             damagingAttribute = heroAttribute.intelligence;
         } else if (this instanceof Warrior) {
@@ -100,8 +102,8 @@ public abstract class Hero {
             damagingAttribute = heroAttribute.dexterity;
         }
 
-        int weaponDamage = 1;
 
+        //this gets the weapon damage if there is a weapon equipped
         if (equipment.get(Slot.WEAPON) instanceof Weapon weapon) {
             weaponDamage = weapon.getWeaponDamage();
         }
