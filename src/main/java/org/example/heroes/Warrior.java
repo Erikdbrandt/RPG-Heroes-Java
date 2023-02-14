@@ -22,10 +22,5 @@ public class Warrior extends Hero {
         heroAttribute.increaseAttributes(3, 2, 1);
     }
 
-    @Override
-    public void totalDamage() {
-
-    }
-
 
 }

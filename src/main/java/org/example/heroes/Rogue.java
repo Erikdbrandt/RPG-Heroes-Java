@@ -22,10 +22,6 @@ public class Rogue extends Hero {
         heroAttribute.increaseAttributes(1, 4, 1);
     }
 
-    @Override
-    public void totalDamage() {
-
-    }
 
 
 }

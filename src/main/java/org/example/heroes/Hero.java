@@ -81,7 +81,6 @@ public abstract class Hero {
             if (item instanceof Armor armor) { //implementera detta
                 HeroAttribute armorAttribute = armor.getArmorAttribute();
                 totalHeroAttributes.increaseAttributes(armorAttribute.strength, armorAttribute.dexterity, armorAttribute.intelligence);
-
             }
         }
         totalHeroAttributes.increaseAttributes(heroAttribute.strength, heroAttribute.dexterity, heroAttribute.intelligence);
@@ -89,42 +88,30 @@ public abstract class Hero {
         return totalHeroAttributes;
     }
 
-    public  void totalDamage() {
+    public void totalDamage() {
 
+        int damagingAttribute = 0;
 
-
-        int damagingAttribute;
-
-        switch (this instanceof ) {
-            case MAGE -> damagingAttribute = totalHeroAttributes().intelligence;
-            case ROGUE, RANGER -> damagingAttribute = totalHeroAttributes().dexterity;
-            case WARRIOR -> damagingAttribute = totalHeroAttributes().strength;
-            default -> {
-                System.out.println("Invalid hero type");
-                return;
-            }
+        if (this instanceof Mage) {
+            damagingAttribute = heroAttribute.intelligence;
+        } else if (this instanceof Warrior) {
+            damagingAttribute = heroAttribute.strength;
+        } else if (this instanceof Ranger || this instanceof Rogue) {
+            damagingAttribute = heroAttribute.dexterity;
         }
 
-     if(this instanceof Warrior warrior) {
-         System.out.println("i am mage!");
-     }
+        int weaponDamage = 1;
 
-
-            int weaponDamage = 1;
-
-            if (equipment.get(Slot.WEAPON) instanceof Weapon weapon) {
-
-                weaponDamage = weapon.getWeaponDamage();
-            }
-
-            int heroDamage = weaponDamage * (1 + (damagingAttribute / 100));
-
-            System.out.println("Hero damage: " + heroDamage);
-
-
-
+        if (equipment.get(Slot.WEAPON) instanceof Weapon weapon) {
+            weaponDamage = weapon.getWeaponDamage();
         }
 
+        int heroDamage = weaponDamage * (1 + (damagingAttribute / 100));
+
+        System.out.println("Hero damage: " + heroDamage);
+
+
+    }
 
 
     public void display() {
