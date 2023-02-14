@@ -20,6 +20,15 @@ public class HeroAttribute {
         this.intelligence += intelligence;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        HeroAttribute that = (HeroAttribute) o;
+
+       return strength == that.strength && dexterity == that.dexterity && intelligence == that.intelligence;
+    }
 
     @Override
     public String toString() {

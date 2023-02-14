@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4243aceb-15e4-468a-8fa4-9444cabbfeae" name="Changes" comment="working on weapondamage">
+    <list default="true" id="4243aceb-15e4-468a-8fa4-9444cabbfeae" name="Changes" comment="removed heroType">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/MageTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/RogueTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/WarriorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/heroes/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/HeroType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/heroes/HeroAttribute.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/heroes/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/items/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,21 +52,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.items.Main" />
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.heroes" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.WarriorTest.levelUpsShouldIncreaseAttributesBy3_2_1">
+    <configuration name="MageTest.levelUpShouldIncreaseAttributesBy1_1_5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RPG-Heroes-Java" />
       <extension name="coverage">
         <pattern>
@@ -68,13 +86,85 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.example.heroes" />
+      <option name="MAIN_CLASS_NAME" value="org.example.heroes.MageTest" />
+      <option name="METHOD_NAME" value="levelUpShouldIncreaseAttributesBy1_1_5" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MageTest.levelUpShouldIncreaseLevelBy1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPG-Heroes-Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.heroes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.heroes" />
+      <option name="MAIN_CLASS_NAME" value="org.example.heroes.MageTest" />
+      <option name="METHOD_NAME" value="levelUpShouldIncreaseLevelBy1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarriorTest.attributesShouldEqual5_2_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPG-Heroes-Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.heroes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.heroes" />
+      <option name="MAIN_CLASS_NAME" value="org.example.heroes.WarriorTest" />
+      <option name="METHOD_NAME" value="attributesShouldEqual5_2_1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarriorTest.levelUpsShouldIncreaseAttributesBy3_2_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPG-Heroes-Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.heroes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.heroes" />
+      <option name="MAIN_CLASS_NAME" value="org.example.heroes.WarriorTest" />
+      <option name="METHOD_NAME" value="levelUpsShouldIncreaseAttributesBy3_2_1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarriorTest.nameShouldEqualErik" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPG-Heroes-Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.heroes.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.heroes" />
+      <option name="MAIN_CLASS_NAME" value="org.example.heroes.WarriorTest" />
+      <option name="METHOD_NAME" value="nameShouldEqualErik" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.WarriorTest.levelUpsShouldIncreaseAttributesBy3_2_1" />
+        <item itemvalue="JUnit.WarriorTest.attributesShouldEqual5_2_1" />
+        <item itemvalue="JUnit.WarriorTest.nameShouldEqualErik" />
+        <item itemvalue="JUnit.MageTest.levelUpShouldIncreaseAttributesBy1_1_5" />
+        <item itemvalue="JUnit.MageTest.levelUpShouldIncreaseLevelBy1" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676043688412</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="removed heroType">
+      <created>1676376950695</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676376950695</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,7 +266,8 @@
     <MESSAGE value="Handling of equip armor and checking if armor is invalid check" />
     <MESSAGE value="Starting to get the calculation of atributes done" />
     <MESSAGE value="Cleanup, now using protected for hero variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleanup, now using protected for hero variables" />
+    <MESSAGE value="removed heroType" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed heroType" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

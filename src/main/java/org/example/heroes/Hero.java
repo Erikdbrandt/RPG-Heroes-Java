@@ -30,6 +30,29 @@ public abstract class Hero {
         equipment.put(Slot.WEAPON, null);
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public ArrayList<WeaponType> getValidWeaponTypes() {
+        return validWeaponTypes;
+    }
+
+    public ArrayList<ArmorType> getValidArmorTypes() {
+        return validArmorTypes;
+    }
+
+    public HashMap<Slot, Item> getEquipment() {
+        return equipment;
+    }
+
+    public HeroAttribute getHeroAttribute() {
+        return heroAttribute;
+    }
 
     public void levelUp() {
         level++;

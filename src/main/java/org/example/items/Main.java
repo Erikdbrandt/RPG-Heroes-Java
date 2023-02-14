@@ -21,6 +21,8 @@ public class Main {
         mage.display();
 
 
+
+
 /*
         Ranger ranger = new Ranger("Ranger");
 

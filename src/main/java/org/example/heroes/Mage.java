@@ -21,10 +21,8 @@ public class Mage extends Hero {
     public void levelUp() {
         super.levelUp();
 
-        heroAttribute.increaseAttributes(1, 1, 8);
+        heroAttribute.increaseAttributes(1, 1, 5);
 
     }
-
-
 
 }
