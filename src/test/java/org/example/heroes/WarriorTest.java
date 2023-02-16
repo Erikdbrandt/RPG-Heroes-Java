@@ -24,7 +24,7 @@ public class WarriorTest {
 
         // Act
 
-        String actual = warrior.getName();
+        String actual = warrior.name;
 
         // Assert
 
@@ -41,7 +41,7 @@ public class WarriorTest {
 
         // Act
 
-        int actual = warrior.getLevel();
+        int actual = warrior.level;
 
         // Assert
 
@@ -58,7 +58,7 @@ public class WarriorTest {
 
         // Act
 
-        HeroAttribute actual = warrior.getHeroAttribute();
+        HeroAttribute actual = warrior.heroAttribute;
 
         // Assert
 
@@ -76,7 +76,7 @@ public class WarriorTest {
         // Act
 
         warrior.levelUp();
-        int actual = warrior.getLevel();
+        int actual = warrior.level;
 
         // Assert
 
@@ -95,7 +95,7 @@ public class WarriorTest {
 
 
         warrior.levelUp();
-        HeroAttribute actual = warrior.getHeroAttribute();
+        HeroAttribute actual = warrior.heroAttribute;
 
         // Assert
 

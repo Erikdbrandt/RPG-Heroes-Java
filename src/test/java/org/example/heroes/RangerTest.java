@@ -1,20 +1,19 @@
 package org.example.heroes;
 
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class MageTest {
+public class RangerTest {
 
-    Mage mage;
+    Ranger ranger;
+
 
     @BeforeEach
     void setUp() {
-        mage = new Mage("Erik");
+        ranger = new Ranger("Erik");
     }
-
 
     @Test
     void nameShouldEqualErik() {
@@ -25,9 +24,10 @@ class MageTest {
 
         // Act
 
-        String actual = mage.name;
+        String actual = ranger.name;
 
         // Assert
+
 
         assertEquals(expected, actual);
 
@@ -42,7 +42,7 @@ class MageTest {
 
         // Act
 
-        int actual = mage.level;
+        int actual = ranger.level;
 
         // Assert
 
@@ -51,15 +51,15 @@ class MageTest {
     }
 
     @Test
-    void attributesShouldEqual1_1_8() {
+    void attributesShouldEqual1_7_1() {
 
         // Arrange
 
-        HeroAttribute expected = new HeroAttribute(1, 1, 8);
+        HeroAttribute expected = new HeroAttribute(1, 7, 1);
 
         // Act
 
-        HeroAttribute actual = mage.heroAttribute;
+        HeroAttribute actual = ranger.heroAttribute;
 
         // Assert
 
@@ -69,42 +69,26 @@ class MageTest {
 
     @Test
     void levelUpShouldIncreaseLevelBy1() {
-
         // Arrange
-
         int expected = 2;
-
         // Act
-
-        mage.levelUp();
-
-        int actual = mage.level;
+        ranger.levelUp();
+        int actual = ranger.level;
         // Assert
-
         assertEquals(expected, actual);
-
     }
 
     @Test
-    void levelUpShouldIncreaseAttributesBy1_1_5() {
-
+    void levelUpShouldIncreaseAttributesBy1_5_1() {
         // Arrange
-
-        HeroAttribute expected = new HeroAttribute(2, 2, 13);
-
+        HeroAttribute expected = new HeroAttribute(2, 12, 2);
         // Act
-
-        mage.levelUp();
-
-        HeroAttribute actual = mage.heroAttribute;
-
+        ranger.levelUp();
+        HeroAttribute actual = ranger.heroAttribute;
         // Assert
-
         assertEquals(expected, actual);
-
     }
 
 
 
 }
-

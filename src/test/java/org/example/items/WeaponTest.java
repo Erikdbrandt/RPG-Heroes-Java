@@ -1,4 +1,4 @@
-package org.example.heroes;
+package org.example.items;
 
 
 import org.junit.jupiter.api.BeforeEach;
@@ -6,26 +6,27 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class MageTest {
+class WeaponTest {
 
-    Mage mage;
+    Weapon weapon;
+
 
     @BeforeEach
     void setUp() {
-        mage = new Mage("Erik");
+        weapon = new Weapon("Sword", 2, 10, WeaponType.SWORD);
     }
 
 
     @Test
-    void nameShouldEqualErik() {
+    void nameShouldEqualSword() {
 
         // Arrange
 
-        String expected = "Erik";
+        String expected = "Sword";
 
         // Act
 
-        String actual = mage.name;
+        String actual = weapon.name;
 
         // Assert
 
@@ -34,41 +35,7 @@ class MageTest {
     }
 
     @Test
-    void levelShouldEqual1() {
-
-        // Arrange
-
-        int expected = 1;
-
-        // Act
-
-        int actual = mage.level;
-
-        // Assert
-
-        assertEquals(expected, actual);
-
-    }
-
-    @Test
-    void attributesShouldEqual1_1_8() {
-
-        // Arrange
-
-        HeroAttribute expected = new HeroAttribute(1, 1, 8);
-
-        // Act
-
-        HeroAttribute actual = mage.heroAttribute;
-
-        // Assert
-
-        assertEquals(expected, actual);
-
-    }
-
-    @Test
-    void levelUpShouldIncreaseLevelBy1() {
+    void requiredLevelShouldEqual2() {
 
         // Arrange
 
@@ -76,9 +43,8 @@ class MageTest {
 
         // Act
 
-        mage.levelUp();
+        int actual = weapon.requiredLevel;
 
-        int actual = mage.level;
         // Assert
 
         assertEquals(expected, actual);
@@ -86,25 +52,53 @@ class MageTest {
     }
 
     @Test
-    void levelUpShouldIncreaseAttributesBy1_1_5() {
+    void weaponSlotShouldEqualWeapon() {
 
         // Arrange
 
-        HeroAttribute expected = new HeroAttribute(2, 2, 13);
+        Slot expected = Slot.WEAPON;
 
         // Act
 
-        mage.levelUp();
-
-        HeroAttribute actual = mage.heroAttribute;
+        Slot actual = weapon.slot;
 
         // Assert
 
         assertEquals(expected, actual);
+    }
 
+    @Test
+    void weaponTypeShouldEqualSword() {
+
+        // Arrange
+
+        WeaponType expected = WeaponType.SWORD;
+
+        // Act
+
+        WeaponType actual = weapon.weaponType;
+
+        // Assert
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void damageShouldEqual10() {
+
+        // Arrange
+
+        int expected = 10;
+
+        // Act
+
+        int actual = weapon.weaponDamage;
+
+        // Assert
+
+        assertEquals(expected, actual);
     }
 
 
 
 }
-

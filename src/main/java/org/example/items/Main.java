@@ -2,7 +2,6 @@ package org.example.items;
 
 import org.example.heroes.HeroAttribute;
 import org.example.heroes.Mage;
-import org.example.heroes.Ranger;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,6 +18,9 @@ public class Main {
 
         mage.totalDamage();
         mage.display();
+
+
+
 
 
 

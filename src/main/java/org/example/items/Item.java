@@ -2,8 +2,10 @@ package org.example.items;
 
 public abstract class Item {
 
-    private final String name;
-    private final int requiredLevel;
+    protected final String name;
+    protected final int requiredLevel;
+
+    protected Slot slot;
 
 
 
@@ -13,15 +15,14 @@ public abstract class Item {
 
     }
 
-    public abstract Slot getSlot();
+    public Slot getSlot() {
+        return slot;
+    }
+
 
 
     public int getRequiredLevel() {
         return requiredLevel;
-    }
-
-    public String getName() {
-        return name;
     }
 
 

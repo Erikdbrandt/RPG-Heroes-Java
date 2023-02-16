@@ -2,11 +2,10 @@ package org.example.items;
 
 public class Weapon extends Item {
 
-    private final int weaponDamage;
+    protected final int weaponDamage;
 
-    private final WeaponType weaponType;
+    protected final WeaponType weaponType;
 
-    private final Slot slot;
 
     public Weapon(String name, int requiredLevel, int weaponDamage, WeaponType weaponType) {
         super(name, requiredLevel);
@@ -24,6 +23,8 @@ public class Weapon extends Item {
         return weaponType;
     }
 
+
+
     @Override
     public String toString() {
         return "Weapon{" +
@@ -32,8 +33,4 @@ public class Weapon extends Item {
                 '}';
     }
 
-    @Override
-    public Slot getSlot() {
-        return slot;
-    }
 }

@@ -5,11 +5,11 @@ import org.example.heroes.HeroAttribute;
 public class Armor extends Item {
 
 
-    private final ArmorType armorType;
+    protected final ArmorType armorType;
 
-    private final HeroAttribute armorAttribute;
+    protected final HeroAttribute armorAttribute;
 
-    private final Slot slot;
+
 
     public Armor(String name, int requiredLevel, Slot slot, ArmorType armorType, HeroAttribute armorAttribute) {
         super(name, requiredLevel);
@@ -27,9 +27,6 @@ public class Armor extends Item {
     }
 
 
-    public Slot getSlot() {
-        return slot;
-    }
 
 
 

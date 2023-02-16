@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4243aceb-15e4-468a-8fa4-9444cabbfeae" name="Changes" comment="removed heroType">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/MageTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/RogueTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/WarriorTest.java" afterDir="false" />
+    <list default="true" id="4243aceb-15e4-468a-8fa4-9444cabbfeae" name="Changes" comment="HeroDamage done">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/RangerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/items/ArmorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/items/WeaponTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/heroes/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/heroes/HeroAttribute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/heroes/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/items/Armor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/items/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/items/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/items/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/heroes/MageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/MageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/heroes/RogueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/RogueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/heroes/WarriorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/WarriorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,107 +54,103 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.items" />
       <recent name="org.example.heroes" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WarriorTest.levelUpsShouldIncreaseAttributesBy3_2_1">
-    <configuration name="MageTest.levelUpShouldIncreaseAttributesBy1_1_5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ArmorTest and 1 more">
+    <configuration name="ArmorTest and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPG-Heroes-Java" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="org.example.items.ArmorTest" />
+        <pattern testClass="org.example.items.WeaponTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArmorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RPG-Heroes-Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.heroes.*" />
+          <option name="PATTERN" value="org.example.items.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.heroes" />
-      <option name="MAIN_CLASS_NAME" value="org.example.heroes.MageTest" />
-      <option name="METHOD_NAME" value="levelUpShouldIncreaseAttributesBy1_1_5" />
+      <option name="PACKAGE_NAME" value="org.example.items" />
+      <option name="MAIN_CLASS_NAME" value="org.example.items.ArmorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArmorTest.armorTypeShouldEqualLeather" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPG-Heroes-Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.items.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.items" />
+      <option name="MAIN_CLASS_NAME" value="org.example.items.ArmorTest" />
+      <option name="METHOD_NAME" value="armorTypeShouldEqualLeather" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MageTest.levelUpShouldIncreaseLevelBy1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArmorTest.attributesShouldEqual4_1_5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RPG-Heroes-Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.heroes.*" />
+          <option name="PATTERN" value="org.example.items.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.heroes" />
-      <option name="MAIN_CLASS_NAME" value="org.example.heroes.MageTest" />
-      <option name="METHOD_NAME" value="levelUpShouldIncreaseLevelBy1" />
+      <option name="PACKAGE_NAME" value="org.example.items" />
+      <option name="MAIN_CLASS_NAME" value="org.example.items.ArmorTest" />
+      <option name="METHOD_NAME" value="attributesShouldEqual4_1_5" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WarriorTest.attributesShouldEqual5_2_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArmorTest.slotShouldEqualBody" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RPG-Heroes-Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.heroes.*" />
+          <option name="PATTERN" value="org.example.items.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example.heroes" />
-      <option name="MAIN_CLASS_NAME" value="org.example.heroes.WarriorTest" />
-      <option name="METHOD_NAME" value="attributesShouldEqual5_2_1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WarriorTest.levelUpsShouldIncreaseAttributesBy3_2_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RPG-Heroes-Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.heroes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.heroes" />
-      <option name="MAIN_CLASS_NAME" value="org.example.heroes.WarriorTest" />
-      <option name="METHOD_NAME" value="levelUpsShouldIncreaseAttributesBy3_2_1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WarriorTest.nameShouldEqualErik" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RPG-Heroes-Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.heroes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.heroes" />
-      <option name="MAIN_CLASS_NAME" value="org.example.heroes.WarriorTest" />
-      <option name="METHOD_NAME" value="nameShouldEqualErik" />
+      <option name="PACKAGE_NAME" value="org.example.items" />
+      <option name="MAIN_CLASS_NAME" value="org.example.items.ArmorTest" />
+      <option name="METHOD_NAME" value="slotShouldEqualBody" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WarriorTest.levelUpsShouldIncreaseAttributesBy3_2_1" />
-        <item itemvalue="JUnit.WarriorTest.attributesShouldEqual5_2_1" />
-        <item itemvalue="JUnit.WarriorTest.nameShouldEqualErik" />
-        <item itemvalue="JUnit.MageTest.levelUpShouldIncreaseAttributesBy1_1_5" />
-        <item itemvalue="JUnit.MageTest.levelUpShouldIncreaseLevelBy1" />
+        <item itemvalue="JUnit.ArmorTest and 1 more" />
+        <item itemvalue="JUnit.ArmorTest" />
+        <item itemvalue="JUnit.ArmorTest.attributesShouldEqual4_1_5" />
+        <item itemvalue="JUnit.ArmorTest.armorTypeShouldEqualLeather" />
+        <item itemvalue="JUnit.ArmorTest.slotShouldEqualBody" />
       </list>
     </recent_temporary>
   </component>
@@ -177,6 +175,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675775523036</updated>
       <workItem from="1675775524182" duration="12576000" />
+      <workItem from="1676449867296" duration="5530000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1675778210774</created>
