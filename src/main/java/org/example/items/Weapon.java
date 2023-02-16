@@ -1,5 +1,7 @@
 package org.example.items;
 
+
+
 public class Weapon extends Item {
 
     protected final int weaponDamage;
@@ -21,6 +23,14 @@ public class Weapon extends Item {
 
     public WeaponType getWeaponType() {
         return weaponType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Weapon weapon = (Weapon) o;
+        return weaponDamage == weapon.weaponDamage && weaponType == weapon.weaponType;
     }
 
 

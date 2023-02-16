@@ -1,6 +1,7 @@
 package org.example.heroes;
 
 
+import org.example.items.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -104,6 +105,134 @@ class MageTest {
 
     }
 
+
+    @Test
+    void testAttributes_1Armor_shouldEquals2_2_9() throws InvalidArmorException {
+
+        // Arrange
+
+        mage.equip(new Armor("Armor", 1, Slot.BODY, ArmorType.CLOTH, new HeroAttribute(1,1,1)));
+
+        HeroAttribute expected = new HeroAttribute(2, 2, 9);
+
+        // Act
+
+        HeroAttribute actual = mage.totalHeroAttributes();
+
+        // Assert
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testAttributes_2Armor_shouldEquals3_3_10() throws InvalidArmorException {
+
+        // Arrange
+
+        mage.equip(new Armor("Armor", 1, Slot.BODY, ArmorType.CLOTH, new HeroAttribute(1,1,1)));
+        mage.equip(new Armor("Armor", 1, Slot.LEGS, ArmorType.CLOTH, new HeroAttribute(1,1,1)));
+
+        HeroAttribute expected = new HeroAttribute(3, 3, 10);
+
+        // Act
+
+        HeroAttribute actual = mage.totalHeroAttributes();
+
+        // Assert
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testAttributes_replaceArmor_shouldEquals3_3_10() throws InvalidArmorException {
+
+        // Arrange
+
+        mage.equip(new Armor("Armor", 1, Slot.BODY, ArmorType.CLOTH, new HeroAttribute(3,3,3)));
+        mage.equip(new Armor("Armor", 1, Slot.BODY, ArmorType.CLOTH, new HeroAttribute(2,2,2)));
+
+        HeroAttribute expected = new HeroAttribute(3, 3, 10);
+
+        // Act
+
+        HeroAttribute actual = mage.totalHeroAttributes();
+
+        // Assert
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testWeaponDamage_0Weapon_shouldEquals1_08()  {
+
+        // Arrange
+
+        double expected = 1.08;
+
+        // Act
+
+        double actual = mage.totalDamage();
+
+        // Assert
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testWeaponDamage_1WeaponDamage8_shouldEquals5_4() throws InvalidWeaponException {
+
+        // Arrange
+
+        mage.equip(new Weapon("Weapon", 1,5, WeaponType.STAFF));
+
+        double expected = 5.4;
+
+        // Act
+
+        double actual = mage.totalDamage();
+
+        // Assert
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testWeaponDamage_replaceWeapon_shouldEquals5_4() throws InvalidWeaponException {
+
+        // Arrange
+
+        mage.equip(new Weapon("Weapon", 1,50, WeaponType.STAFF));
+        mage.equip(new Weapon("Weapon", 1,5, WeaponType.STAFF));
+
+        double expected = 5.4;
+
+        // Act
+
+        double actual = mage.totalDamage();
+
+        // Assert
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testWeaponDamage_1WeaponDamage5_1ArmorIntelligence5_shouldEquals5_4() throws InvalidWeaponException, InvalidArmorException {
+
+        // Arrange
+
+        mage.equip(new Weapon("Weapon", 1,5, WeaponType.STAFF));
+        mage.equip(new Armor("Armor", 1, Slot.BODY, ArmorType.CLOTH, new HeroAttribute(0,0,5)));
+
+        double expected = 5.65;
+
+        // Act
+
+        double actual = mage.totalDamage();
+
+        // Assert
+
+        assertEquals(expected, actual);
+    }
 
 
 }

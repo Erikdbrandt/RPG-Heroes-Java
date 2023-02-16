@@ -1,19 +1,30 @@
 package org.example.items;
 
 
+import org.example.heroes.InvalidWeaponException;
+import org.example.heroes.Ranger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class WeaponTest {
 
-    Weapon weapon;
+    Weapon weaponSword;
+    Weapon weaponBow;
+
+    Weapon validWeapon;
+    Ranger ranger;
 
 
     @BeforeEach
     void setUp() {
-        weapon = new Weapon("Sword", 2, 10, WeaponType.SWORD);
+        weaponSword = new Weapon("Sword", 2, 10, WeaponType.SWORD);
+        ranger = new Ranger("Erik");
+        weaponBow = new Weapon("Bow", 2, 5, WeaponType.BOW);
+        validWeapon = new Weapon("Bow", 1, 10, WeaponType.BOW);
+
     }
 
 
@@ -26,7 +37,7 @@ class WeaponTest {
 
         // Act
 
-        String actual = weapon.name;
+        String actual = weaponSword.name;
 
         // Assert
 
@@ -43,7 +54,7 @@ class WeaponTest {
 
         // Act
 
-        int actual = weapon.requiredLevel;
+        int actual = weaponSword.requiredLevel;
 
         // Assert
 
@@ -60,7 +71,7 @@ class WeaponTest {
 
         // Act
 
-        Slot actual = weapon.slot;
+        Slot actual = weaponSword.slot;
 
         // Assert
 
@@ -76,7 +87,7 @@ class WeaponTest {
 
         // Act
 
-        WeaponType actual = weapon.weaponType;
+        WeaponType actual = weaponSword.weaponType;
 
         // Assert
 
@@ -92,7 +103,58 @@ class WeaponTest {
 
         // Act
 
-        int actual = weapon.weaponDamage;
+        int actual = weaponSword.weaponDamage;
+
+        // Assert
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void testEquipWeapon_weaponlevel2_heroLevel1_shoulThrowInvalidWeaponException() {
+
+        // Arrange
+
+        String expected = "Weapon level is too high";
+
+        // Act
+
+        InvalidWeaponException actual = assertThrows(InvalidWeaponException.class, () -> ranger.equip(weaponBow));
+
+        // Assert
+
+        assertEquals(expected, actual.getMessage());
+
+    }
+
+    @Test
+    void testEquipWeapon_ranger_sword_shouldNotThrowInvalidWeaponException() {
+
+        // Arrange
+
+        String expected = "Invalid weapon type";
+
+        // Act
+
+        InvalidWeaponException actual = assertThrows(InvalidWeaponException.class, () -> ranger.equip(weaponSword));
+
+        // Assert
+
+        assertEquals(expected, actual.getMessage());
+    }
+
+    @Test
+    void testEquipWeapon_ranger_bow_shouldEquipWeapon() throws InvalidWeaponException {
+
+        // Arrange
+
+        ranger.equip(validWeapon);
+
+        Weapon expected = validWeapon;
+
+        // Act
+
+       Weapon actual = (Weapon) ranger.getEquipment().get(Slot.WEAPON);
 
         // Assert
 

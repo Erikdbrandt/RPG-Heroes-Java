@@ -20,7 +20,6 @@ public abstract class Hero {
     protected HeroAttribute heroAttribute;
 
 
-
     public Hero(String name) {
         this.name = name;
 
@@ -59,41 +58,29 @@ public abstract class Hero {
     }
 
 
-    public Boolean canEquip(Item item) {
-        if (item instanceof Weapon) {
-            if (!validWeaponTypes.contains(((Weapon) item).getWeaponType())) {
-                System.out.println("Invalid weapon type");
-                return false;
-            }
-            if (item.getRequiredLevel() > level) {
-                System.out.println("Item level too high");
-                return false;
-            }
-            return true;
-        } else if (item instanceof Armor) {
-            if (!validArmorTypes.contains(((Armor) item).getArmorType())) {
-                System.out.println("Invalid Armor type");
-                return false;
-            }
-            if (item.getRequiredLevel() > level) {
-                System.out.println("Item level too high");
-                return false;
-            }
-            return true;
+    public void equip(Weapon weapon) throws InvalidWeaponException {
+        if (!validWeaponTypes.contains((weapon).getWeaponType())) {
+            throw new InvalidWeaponException("Invalid weapon type");
+
         }
-        return false;
+        if (weapon.getRequiredLevel() > level) {
+            throw new InvalidWeaponException("Weapon level is too high");
+        }
+
+        equipment.put(Slot.WEAPON, weapon);
+
     }
 
-    public void equip(Weapon weapon) {
-        if (canEquip(weapon)) {
-            equipment.put(weapon.getSlot(), weapon);
-        }
-    }
+    public void equip(Armor armor) throws InvalidArmorException {
+        if (!validArmorTypes.contains((armor).getArmorType())) {
+            throw new InvalidArmorException("Invalid armor type");
 
-    public void equip(Armor armor) {
-        if (canEquip(armor)) {
-            equipment.put(armor.getSlot(), armor);
         }
+        if (armor.getRequiredLevel() > level) {
+            throw new InvalidArmorException("Armor level is too high");
+        }
+
+        equipment.put(armor.getSlot(), armor);
     }
 
     public HeroAttribute totalHeroAttributes() {
@@ -111,14 +98,14 @@ public abstract class Hero {
         return totalHeroAttributes;
     }
 
-    public void totalDamage() {
+    public double totalDamage() {
 
-        int damagingAttribute = 0;
-        int weaponDamage = 1;
+        double damagingAttribute = 0;
+        double weaponDamage = 1;
 
         // this gets the damaging attribute of the hero depending on the hero type (mage, warrior, ranger, rogue)
         if (this instanceof Mage) {
-            damagingAttribute = heroAttribute.intelligence;
+            damagingAttribute = totalHeroAttributes().intelligence;
         } else if (this instanceof Warrior) {
             damagingAttribute = heroAttribute.strength;
         } else if (this instanceof Ranger || this instanceof Rogue) {
@@ -131,9 +118,10 @@ public abstract class Hero {
             weaponDamage = weapon.getWeaponDamage();
         }
 
-        int heroDamage = weaponDamage * (1 + (damagingAttribute / 100));
+        double heroDamage = weaponDamage * (1 + (damagingAttribute / 100));
 
-        System.out.println("Hero damage: " + heroDamage);
+
+        return Math.round(heroDamage * 100.0) / 100.0; //rounds the double to 2 decimals
 
 
     }
@@ -144,6 +132,9 @@ public abstract class Hero {
         System.out.println("Level: " + level);
         System.out.println("Equipment: " + equipment);
         System.out.println(totalHeroAttributes());
+
+        System.out.println(this.getClass().asSubclass(this.getClass()).getSimpleName());
+
     }
 
 

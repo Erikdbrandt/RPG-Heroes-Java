@@ -1,11 +1,11 @@
 package org.example.items;
 
-import org.example.heroes.HeroAttribute;
-import org.example.heroes.Mage;
+
 
 public class Main {
     public static void main(String[] args) {
 
+/*
         Mage mage = new Mage("Mage");
 
 
@@ -19,6 +19,7 @@ public class Main {
         mage.totalDamage();
         mage.display();
 
+*/
 
 
 

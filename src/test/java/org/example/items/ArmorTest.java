@@ -1,20 +1,32 @@
 package org.example.items;
 
 import org.example.heroes.HeroAttribute;
+import org.example.heroes.InvalidArmorException;
+import org.example.heroes.Ranger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ArmorTest {
 
 
-    Armor armor;
+    Armor armorLeatherLevel2;
+
+    Ranger ranger;
+
+    Armor armorClothLevel1;
+
+    Armor armorLeatherLevel1;
 
 
     @BeforeEach
     void setUp() {
-        armor = new Armor("Armor", 2, Slot.BODY, ArmorType.LEATHER, new HeroAttribute(4,1,5));
+        armorLeatherLevel2 = new Armor("Armor", 2, Slot.BODY, ArmorType.LEATHER, new HeroAttribute(4,1,5));
+        ranger = new Ranger("Erik");
+        armorClothLevel1 = new Armor("Armor", 1, Slot.BODY, ArmorType.CLOTH, new HeroAttribute(2,1,3));
+        armorLeatherLevel1 = new Armor("Armor", 1, Slot.BODY, ArmorType.LEATHER, new HeroAttribute(3,1,4));
     }
 
     @Test
@@ -26,7 +38,7 @@ public class ArmorTest {
 
         // Act
 
-        String actual = armor.name;
+        String actual = armorLeatherLevel2.name;
 
         // Assert
 
@@ -43,7 +55,7 @@ public class ArmorTest {
 
         // Act
 
-        int actual = armor.requiredLevel;
+        int actual = armorLeatherLevel2.requiredLevel;
 
         // Assert
 
@@ -60,7 +72,7 @@ public class ArmorTest {
 
         // Act
 
-        Slot actual = armor.slot;
+        Slot actual = armorLeatherLevel2.slot;
 
         // Assert
 
@@ -77,7 +89,7 @@ public class ArmorTest {
 
         // Act
 
-        ArmorType actual = armor.armorType;
+        ArmorType actual = armorLeatherLevel2.armorType;
 
         // Assert
 
@@ -94,12 +106,64 @@ public class ArmorTest {
 
         // Act
 
-        HeroAttribute actual = armor.armorAttribute;
+        HeroAttribute actual = armorLeatherLevel2.armorAttribute;
 
         // Assert
 
         assertEquals(expected, actual);
 
     }
+
+
+    @Test
+    void testEquipArmor_armorlevel2_heroLevel1_shoulThrowInvalidArmorException() {
+
+        // Arrange
+
+        String expected = "Armor level is too high";
+
+        // Act
+
+        InvalidArmorException actual = assertThrows(InvalidArmorException.class, () -> ranger.equip(armorLeatherLevel2));
+
+        // Assert
+
+        assertEquals(expected, actual.getMessage());
+    }
+
+    @Test
+    void testEquipArmor_ranger_cloth_shouldNotThrowInvalidArmorException() {
+
+        // Arrange
+
+        String expected = "Invalid armor type";
+
+        // Act
+
+        InvalidArmorException actual = assertThrows(InvalidArmorException.class, () -> ranger.equip(armorClothLevel1));
+
+        // Assert
+
+        assertEquals(expected, actual.getMessage());
+    }
+
+    @Test
+    void testEquipArmor_ranger_leather_shouldEquipArmor() throws InvalidArmorException {
+
+        // Arrange
+
+        ranger.equip(armorLeatherLevel1);
+
+        Armor expected = armorLeatherLevel1;
+
+        // Act
+
+        Armor actual = (Armor) ranger.getEquipment().get(Slot.BODY);
+
+        // Assert
+
+        assertEquals(expected, actual);
+    }
+
 
 }
