@@ -1,6 +1,6 @@
 package org.example.heroes;
 
-import java.util.ArrayList;
+
 
 public class HeroAttribute {
 
@@ -30,14 +30,6 @@ public class HeroAttribute {
        return strength == that.strength && dexterity == that.dexterity && intelligence == that.intelligence;
     }
 
-    @Override
-    public String toString() {
-        return "HeroAttribute{" +
-                "strength=" + strength +
-                ", dexterity=" + dexterity +
-                ", intelligence=" + intelligence +
-                '}';
-    }
 
 
 }

@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4243aceb-15e4-468a-8fa4-9444cabbfeae" name="Changes" comment="Starting testing">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/heroes/InvalidArmorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/heroes/InvalidWeaponException.java" afterDir="false" />
+    <list default="true" id="4243aceb-15e4-468a-8fa4-9444cabbfeae" name="Changes" comment="100 % testing done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/heroes/Hero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/items/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/heroes/HeroAttribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/items/Armor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/items/Weapon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/heroes/MageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/MageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/items/ArmorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/items/ArmorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/items/WeaponTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/items/WeaponTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/heroes/RangerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/RangerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/heroes/RogueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/RogueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/heroes/WarriorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/heroes/WarriorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,29 +75,16 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.example.items" />
       <recent name="org.example.heroes" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ArmorTest.testEquipArmor_armorlevel2_heroLevel1_shoulThrowInvalidArmorException">
-    <configuration name="ArmorTest.testEquipArmor_armorlevel2_heroLevel1_shoulThrowInvalidArmorException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RPG-Heroes-Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.items.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.items" />
-      <option name="MAIN_CLASS_NAME" value="org.example.items.ArmorTest" />
-      <option name="METHOD_NAME" value="testEquipArmor_armorlevel2_heroLevel1_shoulThrowInvalidArmorException" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MageTest.testWeaponDamage_0Weapon_shouldEquals0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.org.example in RPG-Heroes-Java">
+    <configuration name="MageTest.testDisplayHero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RPG-Heroes-Java" />
       <extension name="coverage">
         <pattern>
@@ -106,13 +94,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.example.heroes" />
       <option name="MAIN_CLASS_NAME" value="org.example.heroes.MageTest" />
-      <option name="METHOD_NAME" value="testWeaponDamage_0Weapon_shouldEquals0" />
+      <option name="METHOD_NAME" value="testDisplayHero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MageTest.testWeaponDamage_1WeaponDamage5_1ArmorIntelligence5_shouldEquals5_4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RangerTest.testDisplayHero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RPG-Heroes-Java" />
       <extension name="coverage">
         <pattern>
@@ -121,14 +109,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.heroes" />
-      <option name="MAIN_CLASS_NAME" value="org.example.heroes.MageTest" />
-      <option name="METHOD_NAME" value="testWeaponDamage_1WeaponDamage5_1ArmorIntelligence5_shouldEquals5_4" />
+      <option name="MAIN_CLASS_NAME" value="org.example.heroes.RangerTest" />
+      <option name="METHOD_NAME" value="testDisplayHero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MageTest.testWeaponDamage_1WeaponDamage8_shouldEquals5_4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RogueTest.testDisplayHero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RPG-Heroes-Java" />
       <extension name="coverage">
         <pattern>
@@ -137,14 +125,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.heroes" />
-      <option name="MAIN_CLASS_NAME" value="org.example.heroes.MageTest" />
-      <option name="METHOD_NAME" value="testWeaponDamage_1WeaponDamage8_shouldEquals5_4" />
+      <option name="MAIN_CLASS_NAME" value="org.example.heroes.RogueTest" />
+      <option name="METHOD_NAME" value="testDisplayHero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MageTest.testWeaponDamage_replaceWeapon_shouldEquals5_4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WarriorTest.testDisplayHero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RPG-Heroes-Java" />
       <extension name="coverage">
         <pattern>
@@ -153,20 +141,34 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.heroes" />
-      <option name="MAIN_CLASS_NAME" value="org.example.heroes.MageTest" />
-      <option name="METHOD_NAME" value="testWeaponDamage_replaceWeapon_shouldEquals5_4" />
+      <option name="MAIN_CLASS_NAME" value="org.example.heroes.WarriorTest" />
+      <option name="METHOD_NAME" value="testDisplayHero" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.example in RPG-Heroes-Java" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RPG-Heroes-Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ArmorTest.testEquipArmor_armorlevel2_heroLevel1_shoulThrowInvalidArmorException" />
-        <item itemvalue="JUnit.MageTest.testWeaponDamage_1WeaponDamage5_1ArmorIntelligence5_shouldEquals5_4" />
-        <item itemvalue="JUnit.MageTest.testWeaponDamage_replaceWeapon_shouldEquals5_4" />
-        <item itemvalue="JUnit.MageTest.testWeaponDamage_1WeaponDamage8_shouldEquals5_4" />
-        <item itemvalue="JUnit.MageTest.testWeaponDamage_0Weapon_shouldEquals0" />
+        <item itemvalue="JUnit.org.example in RPG-Heroes-Java" />
+        <item itemvalue="JUnit.RangerTest.testDisplayHero" />
+        <item itemvalue="JUnit.MageTest.testDisplayHero" />
+        <item itemvalue="JUnit.WarriorTest.testDisplayHero" />
+        <item itemvalue="JUnit.RogueTest.testDisplayHero" />
       </list>
     </recent_temporary>
   </component>
@@ -180,6 +182,7 @@
       <updated>1675775523036</updated>
       <workItem from="1675775524182" duration="12576000" />
       <workItem from="1676449867296" duration="5530000" />
+      <workItem from="1676617324632" duration="9898000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1675778210774</created>
@@ -244,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676376950695</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Almost done with all the testing">
+      <created>1676561421697</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1676561421697</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +280,9 @@
     <MESSAGE value="Starting to get the calculation of atributes done" />
     <MESSAGE value="Cleanup, now using protected for hero variables" />
     <MESSAGE value="removed heroType" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed heroType" />
+    <MESSAGE value="Almost done with all the testing" />
+    <MESSAGE value="100 % testing done" />
+    <option name="LAST_COMMIT_MESSAGE" value="100 % testing done" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
@@ -278,5 +290,10 @@
         <watch expression="mage.validArmorTypes" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/RPG_Heroes_Java$org_example_in_RPG_Heroes_Java.ic" NAME="org.example in RPG-Heroes-Java Coverage Results" MODIFIED="1676638724651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.example.*</FILTER>
+    </SUITE>
   </component>
 </project>

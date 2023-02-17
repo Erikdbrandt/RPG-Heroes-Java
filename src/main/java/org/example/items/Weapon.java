@@ -25,22 +25,8 @@ public class Weapon extends Item {
         return weaponType;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Weapon weapon = (Weapon) o;
-        return weaponDamage == weapon.weaponDamage && weaponType == weapon.weaponType;
-    }
 
 
 
-    @Override
-    public String toString() {
-        return "Weapon{" +
-                "weaponDamage=" + weaponDamage +
-                ", weaponType=" + weaponType +
-                '}';
-    }
 
 }

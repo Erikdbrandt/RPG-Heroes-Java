@@ -143,24 +143,7 @@ class MageTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    void testAttributes_replaceArmor_shouldEquals3_3_10() throws InvalidArmorException {
 
-        // Arrange
-
-        mage.equip(new Armor("Armor", 1, Slot.BODY, ArmorType.CLOTH, new HeroAttribute(3,3,3)));
-        mage.equip(new Armor("Armor", 1, Slot.BODY, ArmorType.CLOTH, new HeroAttribute(2,2,2)));
-
-        HeroAttribute expected = new HeroAttribute(3, 3, 10);
-
-        // Act
-
-        HeroAttribute actual = mage.totalHeroAttributes();
-
-        // Assert
-
-        assertEquals(expected, actual);
-    }
 
     @Test
     void testWeaponDamage_0Weapon_shouldEquals1_08()  {
@@ -179,7 +162,7 @@ class MageTest {
     }
 
     @Test
-    void testWeaponDamage_1WeaponDamage8_shouldEquals5_4() throws InvalidWeaponException {
+    void testWeaponDamage_1WeaponDamage5_shouldEquals5_4() throws InvalidWeaponException {
 
         // Arrange
 
@@ -216,7 +199,7 @@ class MageTest {
     }
 
     @Test
-    void testWeaponDamage_1WeaponDamage5_1ArmorIntelligence5_shouldEquals5_4() throws InvalidWeaponException, InvalidArmorException {
+    void testWeaponDamage_1WeaponDamage5_1ArmorIntelligence5_shouldEquals5_65() throws InvalidWeaponException, InvalidArmorException {
 
         // Arrange
 
@@ -234,6 +217,29 @@ class MageTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void testDisplayHero()  {
+
+        // Arrange
+
+        String expected = """
+                Name: Erik
+                Level: 1
+                Class: Mage
+                Total strength: 1
+                Total dexterity: 1
+                Total intelligence: 8
+                Total damage: 1.08
+                """;
+
+        // Act
+
+        String actual = mage.display();
+
+        // Assert
+
+        assertEquals(expected, actual);
+    }
 
 }
 

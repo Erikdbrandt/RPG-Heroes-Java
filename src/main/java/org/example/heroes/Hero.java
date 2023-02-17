@@ -29,29 +29,11 @@ public abstract class Hero {
         equipment.put(Slot.WEAPON, null);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public ArrayList<WeaponType> getValidWeaponTypes() {
-        return validWeaponTypes;
-    }
-
-    public ArrayList<ArmorType> getValidArmorTypes() {
-        return validArmorTypes;
-    }
 
     public HashMap<Slot, Item> getEquipment() {
         return equipment;
     }
 
-    public HeroAttribute getHeroAttribute() {
-        return heroAttribute;
-    }
 
     public void levelUp() {
         level++;
@@ -107,9 +89,9 @@ public abstract class Hero {
         if (this instanceof Mage) {
             damagingAttribute = totalHeroAttributes().intelligence;
         } else if (this instanceof Warrior) {
-            damagingAttribute = heroAttribute.strength;
+            damagingAttribute = totalHeroAttributes().strength;
         } else if (this instanceof Ranger || this instanceof Rogue) {
-            damagingAttribute = heroAttribute.dexterity;
+            damagingAttribute = totalHeroAttributes().dexterity;
         }
 
 
@@ -127,13 +109,18 @@ public abstract class Hero {
     }
 
 
-    public void display() {
-        System.out.println("Name: " + name);
-        System.out.println("Level: " + level);
-        System.out.println("Equipment: " + equipment);
-        System.out.println(totalHeroAttributes());
+    public String  display() {
 
-        System.out.println(this.getClass().asSubclass(this.getClass()).getSimpleName());
+
+        return "Name: " + name + "\n" +
+                "Level: " + level + "\n" +
+                "Class: " + this.getClass().asSubclass(this.getClass()).getSimpleName() + "\n" +
+                "Total strength: " + totalHeroAttributes().strength + "\n" +
+                "Total dexterity: " + totalHeroAttributes().dexterity + "\n" +
+                "Total intelligence: " + totalHeroAttributes().intelligence + "\n" +
+                "Total damage: " + totalDamage() + "\n";
+
+
 
     }
 
