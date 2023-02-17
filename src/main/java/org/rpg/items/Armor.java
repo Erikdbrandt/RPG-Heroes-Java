@@ -1,10 +1,11 @@
-package org.example.items;
+package org.rpg.items;
 
-import org.example.heroes.HeroAttribute;
+import org.rpg.heroes.HeroAttribute;
 
 public class Armor extends Item {
 
 
+    // the attributes are protected so they can be accessed by the subclasses and also in the testing in the same package
     protected final ArmorType armorType;
 
     protected final HeroAttribute armorAttribute;

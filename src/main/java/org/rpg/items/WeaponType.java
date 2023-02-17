@@ -1,4 +1,4 @@
-package org.example.items;
+package org.rpg.items;
 
 public enum WeaponType {
 

@@ -1,6 +1,6 @@
-package org.example.heroes;
+package org.rpg.heroes;
 
-import org.example.items.*;
+import org.rpg.items.*;
 import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

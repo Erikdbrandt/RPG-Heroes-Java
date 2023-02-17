@@ -1,8 +1,8 @@
-package org.example.items;
+package org.rpg.items;
 
 
-import org.example.heroes.InvalidWeaponException;
-import org.example.heroes.Ranger;
+import org.rpg.heroes.InvalidWeaponException;
+import org.rpg.heroes.Ranger;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

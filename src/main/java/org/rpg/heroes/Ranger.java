@@ -1,14 +1,16 @@
-package org.example.heroes;
+package org.rpg.heroes;
 
 import java.util.ArrayList;
 import java.util.Collections;
 
-import org.example.items.ArmorType;
-import org.example.items.WeaponType;
+import org.rpg.items.ArmorType;
+import org.rpg.items.WeaponType;
 
 
 public class Ranger extends Hero {
-
+    /*
+     * the constructor adds the valid weapon and armor types to the lists and also sets the initial attributes for the class
+     * */
     public Ranger(String name) {
         super(name);
         heroAttribute = new HeroAttribute(1, 7, 1);

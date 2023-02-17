@@ -1,6 +1,8 @@
-package org.example.items;
+package org.rpg.items;
 
 public abstract class Item {
+
+    // the attributes are protected so that they can be accessed by the subclasses and test classes in the same package
 
     protected final String name;
     protected final int requiredLevel;

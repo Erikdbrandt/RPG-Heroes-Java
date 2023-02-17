@@ -6,6 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="4243aceb-15e4-468a-8fa4-9444cabbfeae" name="Changes" comment="100 % testing done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/heroes/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/HeroAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/heroes/HeroAttribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/InvalidArmorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/heroes/InvalidArmorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/InvalidWeaponException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/heroes/InvalidWeaponException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/Mage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/heroes/Mage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/Ranger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/heroes/Ranger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/Rogue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/heroes/Rogue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/heroes/Warrior.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/heroes/Warrior.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/Armor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/items/Armor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/ArmorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/items/ArmorType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/items/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/Slot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/items/Slot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/Weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/items/Weapon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/items/WeaponType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/rpg/items/WeaponType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/heroes/MageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rpg/heroes/MageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/heroes/RangerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rpg/heroes/RangerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/heroes/RogueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rpg/heroes/RogueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/heroes/WarriorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rpg/heroes/WarriorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/items/ArmorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rpg/items/ArmorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/items/WeaponTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/rpg/items/WeaponTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,17 +94,17 @@
       <recent name="org.example.heroes" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.example in RPG-Heroes-Java">
+  <component name="RunManager" selected="JUnit.rpg in rpg-heroes">
     <configuration name="MageTest.testDisplayHero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RPG-Heroes-Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.heroes.*" />
+          <option name="PATTERN" value="org.rpg.heroes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.heroes" />
-      <option name="MAIN_CLASS_NAME" value="org.example.heroes.MageTest" />
+      <option name="MAIN_CLASS_NAME" value="org.rpg.heroes.MageTest" />
       <option name="METHOD_NAME" value="testDisplayHero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -95,28 +115,12 @@
       <module name="RPG-Heroes-Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.heroes.*" />
+          <option name="PATTERN" value="org.rpg.heroes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.heroes" />
-      <option name="MAIN_CLASS_NAME" value="org.example.heroes.RangerTest" />
-      <option name="METHOD_NAME" value="testDisplayHero" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WarriorTest.testDisplayHero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RPG-Heroes-Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.example.heroes.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.example.heroes" />
-      <option name="MAIN_CLASS_NAME" value="org.example.heroes.WarriorTest" />
+      <option name="MAIN_CLASS_NAME" value="org.rpg.heroes.RangerTest" />
       <option name="METHOD_NAME" value="testDisplayHero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -131,27 +135,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="org.example in RPG-Heroes-Java" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="org.rpg in RPG-Heroes-Java" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RPG-Heroes-Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.rpg.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="PACKAGE_NAME" value="org.rpg" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rpg in rpg-heroes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpg-heroes" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/org/rpg" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.rpg in rpg-heroes" />
         <item itemvalue="JUnit.example in RPG-Heroes-Java" />
-        <item itemvalue="JUnit.org.example in RPG-Heroes-Java" />
+        <item itemvalue="JUnit.org.rpg in RPG-Heroes-Java" />
         <item itemvalue="JUnit.RangerTest.testDisplayHero" />
         <item itemvalue="JUnit.MageTest.testDisplayHero" />
-        <item itemvalue="JUnit.WarriorTest.testDisplayHero" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676561421697</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="100 % testing done">
+      <created>1676640844710</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676640844710</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

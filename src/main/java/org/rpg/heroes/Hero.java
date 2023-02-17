@@ -1,14 +1,18 @@
-package org.example.heroes;
+package org.rpg.heroes;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.example.items.*;
+import org.rpg.items.*;
 
 
 public abstract class Hero {
 
+
+    //the attributes in this class are protected so that they can be accessed by the subclasses and also in the testing in the same package
+
     protected final String name;
+
     protected int level = 1;
 
     protected ArrayList<WeaponType> validWeaponTypes;
@@ -20,6 +24,7 @@ public abstract class Hero {
     protected HeroAttribute heroAttribute;
 
 
+    // when a hero is created it is given a name and the equipment hashmap is filled with null values with the Slots as keys
     public Hero(String name) {
         this.name = name;
 
@@ -35,10 +40,20 @@ public abstract class Hero {
     }
 
 
+    //this method is used to increase the level of the hero
+
     public void levelUp() {
         level++;
     }
 
+
+    /*
+    * this method is used to equip a weapon to the hero
+    * it checks if the weapon type is valid for the hero
+    * it also checks if the weapon level is too high for the hero
+    * if the weapon is valid it is added to the equipment hashmap
+    * otherwise an exception is thrown
+    * */
 
     public void equip(Weapon weapon) throws InvalidWeaponException {
         if (!validWeaponTypes.contains((weapon).getWeaponType())) {
@@ -53,6 +68,13 @@ public abstract class Hero {
 
     }
 
+    /*
+    * this method is used to equip armor to the hero
+    * it checks if the armor type is valid for the hero
+    * it also checks if the armor level is too high for the hero
+    * if the armor is valid it is added to the equipment hashmap
+    * */
+
     public void equip(Armor armor) throws InvalidArmorException {
         if (!validArmorTypes.contains((armor).getArmorType())) {
             throw new InvalidArmorException("Invalid armor type");
@@ -64,6 +86,13 @@ public abstract class Hero {
 
         equipment.put(armor.getSlot(), armor);
     }
+
+
+    /*
+    * this method is used to return the total hero attributes
+    * its adds the attributes from the equipment and adds it to the hero attributes
+    * and also adds the hero attributes from the hero according to the hero level
+    * */
 
     public HeroAttribute totalHeroAttributes() {
 
@@ -79,6 +108,13 @@ public abstract class Hero {
 
         return totalHeroAttributes;
     }
+
+    /*
+    * this method is used to return the total hero damage
+    * it checks the hero type and gets the damaging attribute
+    * it also checks if the hero has a weapon equipped and gets the weapon damage
+    * it then calculates the total damage
+    * */
 
     public double totalDamage() {
 
@@ -108,6 +144,7 @@ public abstract class Hero {
 
     }
 
+    //this method is used to display the hero information
 
     public String  display() {
 
