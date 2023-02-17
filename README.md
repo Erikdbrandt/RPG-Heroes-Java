@@ -10,11 +10,11 @@ The projects also use unit testing to make sure that the functionality is workin
 
 #### Technologies used
 
-Fundamenatal Java
-Intelij
-Maven
-Git and Github
-JUnit5
+* Fundamenatal Java
+* Intelij
+* Maven
+* Git and Github
+* JUnit5
 
 #### Testing
 The project is tested and passed all tests. They are available in actions
